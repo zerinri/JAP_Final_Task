@@ -43,7 +43,7 @@ namespace NormativeApp.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCharacter(UpdateIngredientDto updateIngredient)
+        public async Task<IActionResult> UpdateIngredient(UpdateIngredientDto updateIngredient)
         {
             var response = await _ingredientService.UpdateIngredient(updateIngredient);
             if (response.Data == null)

@@ -43,13 +43,13 @@ namespace NormativeApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCharacter(AddCategoryDto newCategory)
+        public async Task<IActionResult> AddCategory(AddCategoryDto newCategory)
         {
             return Ok(await _categoryService.AddCategory(newCategory));
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCharacter(UpdateCategoryDto updateCategory)
+        public async Task<IActionResult> UpdateCategory(UpdateCategoryDto updateCategory)
         {
             var response = await _categoryService.UpdateCategory(updateCategory);
             if (response.Data == null)
